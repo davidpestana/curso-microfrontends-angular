@@ -29,7 +29,15 @@ Cada sesión se divide en **dos bloques principales**: teoría + laboratorio gui
 
 ---
 
-### 🔹 Sesión 2 – [Angular Modular vs Standalone: bases para MFEs](https://arquitectura-angular-par-wf9w8oc.gamma.site/)
+### 🔹 Sesión 2.1 – [Laboratorio comparativo de MFE sin framework (Vanilla JS)](https://evaluacion-tecnica-de-en-1t33wzb.gamma.site/)
+
+- Evaluación técnica de múltiples enfoques de integración: `import()`, Event Bus, `single-spa`, `qiankun`, `SystemJS`, y `Webpack Module Federation`
+- Comprensión progresiva de cómo se pasa de integración manual a federación avanzada
+- Comparativa entre enfoques runtime dinámicos y soluciones basadas en bundler
+- **Laboratorio:** Implementación paso a paso de un sistema shell + MFEs en 6 fases técnicas, analizando las ventajas, limitaciones y casos de uso reales de cada enfoque.
+
+
+### 🔹 Sesión 2.2 – [Angular Modular vs Standalone: bases para MFEs](https://arquitectura-angular-par-wf9w8oc.gamma.site/)
 
 - Revisión de arquitectura Angular clásica (`NgModules`)
 - Introducción a Angular Standalone
