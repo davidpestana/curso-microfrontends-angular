@@ -49,6 +49,7 @@ Se instala y utiliza `single-spa` directamente desde CDN. Los MFEs deben exponer
 
    ```html
    <script src="https://cdn.jsdelivr.net/npm/single-spa/lib/system/single-spa.min.js"></script>
+   <script src="https://unpkg.com/systemjs/dist/system.min.js"></script>
    <script type="module" src="./shell.js"></script>
    ```
 
