@@ -46,39 +46,84 @@ Cada sesión se divide en **dos bloques principales**: teoría + laboratorio gui
 
 ---
 
-### 🔹 Sesión 3 – Angular + Module Federation
+## 🔹 Sesión 3 – Escalabilidad y arquitectura federada con Nx + Module Federation
 
-- Qué es Module Federation y cómo se integra con Angular
-- Shell y remotes, sincronización de rutas, lazy loading compartido
-- Comunicación entre MFEs Angular
-- **Laboratorio:** Integración de Angular MFEs con Module Federation
+### 🎯 Contenidos
 
----
+* Monorepo con Nx: estructura modular por dominios funcionales
+* Comparativa con multirepo: implicaciones en grandes equipos
+* Integración de Angular + Webpack Module Federation
+* Diseño estratégico de shell y remotes
+* Rutas sincronizadas, lazy loading y composición desde el shell
 
-### 🔹 Sesión 4 – Nx y Monorepos: arquitectura empresarial
+### 🧪 Laboratorio
 
-- Nx vs MultiRepo
-- Organización de dominios y bibliotecas compartidas
-- Comunicación desacoplada: servicios comunes, Event Bus
-- **Laboratorio:** Reorganización del sistema MFE con Nx
+* Crear un workspace Nx con un shell y dos MFEs federados
+* Definir dominios funcionales (`feature/`, `ui/`, `data/`) en libs compartidas
+* Cargar remotes desde shell usando rutas perezosas y `loadRemoteModule`
+* Validar aislamiento, comunicación y compartición de dependencias
 
----
-
-### 🔹 Sesión 5 – Refactorización y migración de proyectos legacy
-
-- Estrategias de migración progresiva a MFE
-- Angular Elements como wrapper para código legacy
-- Exposición segura de módulos y componentes antiguos
-- **Laboratorio:** Integración de un proyecto modular clásico como MFE
+> **Aplicación práctica:** este laboratorio reproduce una arquitectura real a escala empresarial, donde cada dominio puede ser desarrollado y desplegado por equipos separados sin duplicación de lógica.
 
 ---
 
-### 🔹 Sesión 6 – Seguridad, despliegue y patrones avanzados
+## 🔹 Sesión 4 – Web Components y compatibilidad con Angular Elements
 
-- Seguridad y autenticación en aplicaciones distribuidas
-- Single Sign-On (SSO), OAuth2 y OIDC en Angular
-- Despliegue independiente de MFEs, estrategia CI/CD
-- **Laboratorio final:** Shell + MFEs con rutas protegidas y login común
+### 🎯 Contenidos
+
+* Angular Elements: convertir cualquier componente Angular en Web Component
+* Estrategias de interoperabilidad con otras tecnologías (React, Webpack, JSP)
+* Limitaciones y mejores prácticas de Angular Elements
+* Integración de Elements en el shell o en MFEs
+
+### 🧪 Laboratorio
+
+* Exportar un componente Angular como Web Component
+* Consumirlo desde una app externa (shell en Angular o app externa simulada)
+* Aplicar estilos aislados y comunicación por atributos/eventos
+* Usar `customElements.define()` de forma controlada desde remotes
+
+> **Aplicación práctica:** permite integrar Angular en portales corporativos heterogéneos o sistemas legacy sin necesidad de reescritura total.
+
+---
+
+## 🔹 Sesión 5 – Rendimiento y arquitectura reactiva con RxJS
+
+### 🎯 Contenidos
+
+* Diagnóstico de problemas de rendimiento: bundle, change detection, carga inicial
+* ChangeDetectionStrategy: default vs OnPush
+* Desacoplamiento con arquitectura reactiva
+* RxJS: patrones profesionales (`shareReplay`, `switchMap`, `auditTime`, etc.)
+
+### 🧪 Laboratorio
+
+* Refactor de un flujo imperativo → reactivo con `BehaviorSubject` y `Observables`
+* Aplicar `OnPush` y eliminar bindings costosos
+* Analizar el tamaño del bundle por MFE con `source-map-explorer`
+* Medir impacto de `preloadingStrategy`, `providedIn: 'root'` y técnicas de tree-shaking
+
+> **Aplicación práctica:** refuerza la calidad de experiencia del usuario y reduce el coste de mantenimiento en grandes ecosistemas MFE.
+
+---
+
+## 🔹 Sesión 6 – Seguridad federada y autenticación distribuida
+
+### 🎯 Contenidos
+
+* SSO en microfrontends: OAuth2 + OIDC
+* Uso de tokens y guardias (`canActivate`) en MFEs
+* Protección de rutas desde el shell y delegación en remotes
+* Carga condicional de MFEs según rol o sesión
+
+### 🧪 Laboratorio
+
+* Simulación de un sistema con login común en el shell
+* Compartición del estado de sesión vía librería común (`auth-lib`)
+* Protección de rutas privadas en cada MFE federado
+* Renderizado condicional de MFEs según permisos
+
+> **Aplicación práctica:** ideal para aplicaciones con múltiples dominios (RRHH, Finanzas, BI...) donde cada módulo tiene su acceso delegado y lógica de visibilidad.
 
 ---
 
