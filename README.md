@@ -67,7 +67,7 @@ Cada sesión se divide en **dos bloques principales**: teoría + laboratorio gui
 
 ---
 
-## 🔹 Sesión 4 – Web Components y compatibilidad con Angular Elements
+## 🔹 Sesión 4 – [Web Components y compatibilidad con Angular Elements](https://angular-elements-y-web-c-nnj4hln.gamma.site/)
 
 ### 🎯 Contenidos
 
