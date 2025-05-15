@@ -46,7 +46,7 @@ Cada sesión se divide en **dos bloques principales**: teoría + laboratorio gui
 
 ---
 
-## 🔹 Sesión 3 – Escalabilidad y arquitectura federada con Nx + Module Federation
+## 🔹 Sesión 3 – [Escalabilidad y arquitectura federada con Nx + Module Federation](https://escalando-angular-con-nx-i4s0qyp.gamma.site/)
 
 ### 🎯 Contenidos
 
